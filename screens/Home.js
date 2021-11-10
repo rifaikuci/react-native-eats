@@ -41,12 +41,13 @@ const Home = ({navigation}) => {
                 <SearchBar handleCity={setCity}
                 />
             </View>
+
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories/>
                 <RestaurantItem navigation={navigation} restaurantData={restaurantData}/>
             </ScrollView>
-            <Divider width={1} />
-            <ButtomTabs />
+            <Divider width={1}/>
+            <ButtomTabs/>
 
         </SafeAreaView>
     )

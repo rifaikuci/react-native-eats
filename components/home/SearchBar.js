@@ -27,7 +27,9 @@ export default function SearchBar({handleCity}) {
                         marginRight: 10
                     }
                 }}
-                ref={ref => {location = ref}}
+                ref={ref => {
+                    location = ref
+                }}
                 renderLeftButton={() => (
                     <View>
                         <Ionicons style={{marginLeft: 10}} name="location-sharp" size={24}/>
@@ -37,10 +39,10 @@ export default function SearchBar({handleCity}) {
                 // çalışmama nedenini görmek için kullanırız.  onFail={error => console.error(error)}
 
                 renderRightButton={() => (
-                    <TouchableOpacity activeOpacity={1}  onPress={(data) => {
-                        if(location && location.getAddressText()) {
+                    <TouchableOpacity activeOpacity={1} onPress={(data) => {
+                        if (location && location.getAddressText()) {
                             handleCity(location.getAddressText())
-                        }else {
+                        } else {
                             handleCity("Fatih")
                         }
                     }}>
